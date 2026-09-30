@@ -1,0 +1,43 @@
+.site-opening {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: #f1f0ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.site-opening > img {
+  display: block;
+  width: min(100%, 440px);
+  height: auto;
+  object-fit: contain;
+}
+.site-opening > button {
+  position: absolute;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  right: max(24px, env(safe-area-inset-right));
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 44px;
+  padding: 10px 15px;
+  background: transparent;
+  border: 1px solid #1c2e3133;
+  border-radius: 4px;
+  font:
+    600 12px/1.5 Manrope,
+    sans-serif;
+  color: #1c2e31;
+  cursor: pointer;
+}
+.site-opening > button:focus-visible {
+  outline: 2px solid #a76949;
+  outline-offset: 4px;
+}
+@media (max-width: 600px) {
+  .site-opening > img {
+    width: min(100%, 360px);
+  }
+}
