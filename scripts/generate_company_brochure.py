@@ -146,7 +146,7 @@ def page_two(c):
     section_label(c, 40, 108, "Let's discuss your requirement", HexColor("#D3A388"))
     text(c, 40, 80, "Tell us what your work demands.", "LatoBold", 19, WHITE)
     text(c, 40, 54, "+91 95594 54555", "Lato", 11, CREAM)
-    text(c, 187, 54, "versatileinstru@gmail.com", "Lato", 11, CREAM)
+    text(c, 187, 54, "contact@versatileinstruments.com", "Lato", 11, CREAM)
     text(c, 40, 30, "H. No. 2753, 3rd Floor, Street No. 13, Ranjit Nagar, Patel Nagar South, New Delhi, Central Delhi, Delhi 110008", "Lato", 8.4, HexColor("#D3DEDA"))
     text(c, 670, 107, "VERSATILE", "LatoHeavy", 11, WHITE)
     text(c, 671, 93, "INSTRUMENTS", "Lato", 7, CREAM, 1.1)

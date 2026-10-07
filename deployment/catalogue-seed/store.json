@@ -1,0 +1,319 @@
+{
+  "admin": null,
+  "categories": [
+    {
+      "id": "a2588b40ca23f8e1f166a050",
+      "name": "Surface & Particle Analysis",
+      "slug": "surface-particle-analysis",
+      "imageUrl": "/images/category-surface-particle-analysis.webp",
+      "description": "Instruments for particle properties, surface charge, wettability and dispersion characterization.",
+      "createdAt": "2026-09-25T12:11:06.750Z"
+    },
+    {
+      "id": "preset-category-x-ray-analysis",
+      "name": "X-Ray Analysis",
+      "slug": "x-ray-analysis",
+      "imageUrl": "/images/category-x-ray-analysis.webp",
+      "description": "Instruments for X-ray-based material, structural and elemental analysis.",
+      "createdAt": "2026-09-26T15:30:00.000Z"
+    },
+    {
+      "id": "preset-category-spectroscopy",
+      "name": "Spectroscopy",
+      "slug": "spectroscopy",
+      "imageUrl": "/images/category-spectroscopy.webp",
+      "description": "Instruments for optical, molecular and elemental characterization.",
+      "createdAt": "2026-09-26T15:30:00.000Z"
+    },
+    {
+      "id": "preset-category-rheology-processing",
+      "name": "Rheology & Processing",
+      "slug": "rheology-processing",
+      "imageUrl": "/images/category-rheology-processing.webp",
+      "description": "Equipment for flow behaviour, viscosity and material processing studies.",
+      "createdAt": "2026-09-26T15:30:00.000Z"
+    },
+    {
+      "id": "preset-category-reactor-system",
+      "name": "Reactor System",
+      "slug": "reactor-system",
+      "imageUrl": "/images/category-reactor-system.webp",
+      "description": "Reactor equipment for controlled reactions and process development.",
+      "createdAt": "2026-09-26T15:30:00.000Z"
+    },
+    {
+      "id": "preset-category-material-testing",
+      "name": "Material Testing",
+      "slug": "material-testing",
+      "imageUrl": "/images/category-material-testing.webp",
+      "description": "Equipment for evaluating mechanical and physical material properties.",
+      "createdAt": "2026-09-26T15:30:00.000Z"
+    },
+    {
+      "id": "preset-category-advanced-manufacturing",
+      "name": "Advanced Manufacturing",
+      "slug": "advanced-manufacturing",
+      "imageUrl": "/images/category-advanced-manufacturing.webp",
+      "description": "Equipment supporting advanced fabrication and manufacturing applications.",
+      "createdAt": "2026-09-26T15:30:00.000Z"
+    },
+    {
+      "id": "preset-category-thermal-analysis",
+      "name": "Thermal Analysis",
+      "slug": "thermal-analysis",
+      "imageUrl": "/images/category-thermal-analysis.webp",
+      "description": "Instruments for studying material behaviour under controlled temperature conditions.",
+      "createdAt": "2026-09-26T15:30:00.000Z"
+    },
+    {
+      "id": "preset-category-microscopy",
+      "name": "Microscopy",
+      "slug": "microscopy",
+      "imageUrl": "/images/category-microscopy.webp",
+      "description": "Imaging instruments for examining sample structure, morphology and surfaces.",
+      "createdAt": "2026-09-26T15:30:00.000Z"
+    },
+    {
+      "id": "preset-category-chromatography",
+      "name": "Chromatography",
+      "slug": "chromatography",
+      "imageUrl": "/images/category-chromatography.webp",
+      "description": "Equipment for separating and analysing components in sample mixtures.",
+      "createdAt": "2026-09-26T15:30:00.000Z"
+    },
+    {
+      "id": "preset-category-laboratory-equipment",
+      "name": "Laboratory Equipment",
+      "slug": "laboratory-equipment",
+      "imageUrl": "/images/category-laboratory-equipment.webp",
+      "description": "General laboratory instruments and equipment for research and routine workflows.",
+      "createdAt": "2026-09-26T15:30:00.000Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "ece21e3e790929bfdeb9a790",
+      "name": "Versatile Scientific (Zeta Potential Analyzer)",
+      "categoryId": "a2588b40ca23f8e1f166a050",
+      "sku": "",
+      "overview": "A particle characterization system for measuring zeta potential, electrophoretic mobility and dispersion stability using Electrophoretic Light Scattering (ELS). Optional Dynamic Light Scattering (DLS) supports particle size analysis.",
+      "description": "The Versatile Scientific Zeta Potential Analyzer is a versatile analytical system designed for accurate evaluation of particle surface charge and dispersion stability. Based on Electrophoretic Light Scattering (ELS) technology, it enables reliable measurement of zeta potential and electrophoretic mobility across a wide range of sample types.\n\nThe system can be configured with Dynamic Light Scattering (DLS) capability for particle size characterization, allowing comprehensive analysis of nanoparticle and colloidal systems. Its sensitive optical detection, stable laser source, temperature control, and automated measurement functions provide consistent and reproducible results.\n\nAdvanced software supports automated data acquisition, measurement control, result analysis, graphical evaluation, trend comparison, and report generation. The instrument is suitable for nanomaterial research, pharmaceuticals, cosmetics, polymers, paints and coatings, food science, environmental studies, formulation development, and industrial quality control.\n\nThe Versatile Scientific Zeta Potential Analyzer provides a dependable solution for researchers and laboratories requiring precise surface charge, particle stability, and dispersion characterization.",
+      "catalogueUrl": "",
+      "imageUrl": "/uploads/nexaris-zeta-potential-analyzer.png",
+      "images": [
+        "/uploads/nexaris-zeta-potential-analyzer.png"
+      ],
+      "features": [
+        "Precise zeta potential characterization for evaluating particle surface charge and colloidal stability.",
+        "Electrophoretic mobility measurement for detailed assessment of charged particles in liquid dispersions.",
+        "Optional DLS particle sizing capability for combined particle size and zeta potential analysis.",
+        "Broad analytical range suitable for nanoparticles, colloids, emulsions, suspensions, polymers and biomaterials."
+      ],
+      "specifications": [
+        {
+          "label": "System Configuration",
+          "value": "Automated Zeta Potential & Particle Characterization Analyzer"
+        },
+        {
+          "label": "Primary Measurement Technique",
+          "value": "Electrophoretic Light Scattering (ELS)"
+        },
+        {
+          "label": "Optional Particle Sizing",
+          "value": "Dynamic Light Scattering (DLS)"
+        },
+        {
+          "label": "Light Source",
+          "value": "High-Stability Solid-State Laser, 633 nm"
+        }
+      ],
+      "status": "published",
+      "featured": false,
+      "createdAt": "2026-09-25T12:11:06.750Z",
+      "updatedAt": "2026-09-26T19:40:32.860Z",
+      "slug": "nexaris-scientific-zeta-potential-analyzer-ece21e3e"
+    },
+    {
+      "id": "cad7b0b42ede0b0577ea151d",
+      "name": "Versatile Scientific (Contact Angle Meter)",
+      "categoryId": "a2588b40ca23f8e1f166a050",
+      "sku": "",
+      "overview": "An optical surface characterization system for contact angle, wettability, surface free energy and interfacial analysis, with high-resolution imaging and automated measurement capabilities.",
+      "description": "The Versatile Scientific Contact Angle Meter is an advanced surface characterization system engineered for precise evaluation of contact angle, wettability, surface free energy, and interfacial properties. The system utilizes sessile-drop optical analysis with high-resolution imaging and automated measurement capabilities for accurate and reproducible surface characterization.\n\nIt supports static and dynamic contact angle measurements, including advancing, receding, sliding, and roll-off angle analysis. The automated liquid dispensing system ensures consistent droplet formation, while the motorized sample stage provides precise specimen positioning during measurements.\n\nAdvanced image-processing algorithms enable automatic droplet detection, edge identification, profile fitting, and contact angle calculation. The system can also support surface free-energy calculations using established analytical models such as Owens-Wendt, Fowkes, Wu, Zisman, and OWRK.\n\nThe Versatile Scientific Contact Angle Meter is suitable for evaluating coatings, polymers, films, glass, metals, ceramics, composites, textiles, membranes, electronic materials, paints, adhesives, and advanced engineered surfaces.\n\nDesigned for research, quality control, and industrial applications, the system provides a reliable solution for surface treatment evaluation, adhesion studies, coating development, material characterization, and wettability analysis.",
+      "catalogueUrl": "",
+      "imageUrl": "/uploads/nexaris-contact-angle-meter.png",
+      "images": [
+        "/uploads/nexaris-contact-angle-meter.png"
+      ],
+      "features": [
+        "Static and dynamic contact angle measurements, including advancing, receding, sliding, and roll-off angles.",
+        "Automated liquid dispensing for consistent droplet formation and a motorized sample stage for precise positioning.",
+        "High-resolution imaging with automatic droplet detection, edge identification, profile fitting, and angle calculation.",
+        "Surface free-energy calculations using models such as Owens-Wendt, Fowkes, Wu, Zisman, and OWRK.",
+        "Suitable for surface treatment evaluation, adhesion studies, coating development, and wettability analysis."
+      ],
+      "specifications": [],
+      "status": "published",
+      "featured": false,
+      "createdAt": "2026-09-25T12:31:12.620Z",
+      "updatedAt": "2026-09-26T19:40:32.860Z",
+      "slug": "nexaris-scientific-contact-angle-meter-cad7b0b4"
+    },
+    {
+      "id": "7cc574693211986ff5c70331",
+      "name": "Versatile Scientific (UV-Visible-NIR Spectrophotometer)",
+      "categoryId": "preset-category-spectroscopy",
+      "sku": "",
+      "overview": "An instrument for UV, visible and near-infrared spectrophotometric analysis. Share your sample type and required wavelength range to discuss a suitable configuration.",
+      "description": "An instrument for UV, visible and near-infrared spectrophotometric analysis. Share your sample type and required wavelength range to discuss a suitable configuration.",
+      "catalogueUrl": "",
+      "imageUrl": "/images/product-uv-visible-nir.webp",
+      "images": [
+        "/images/product-uv-visible-nir.webp"
+      ],
+      "features": [],
+      "specifications": [],
+      "status": "published",
+      "featured": true,
+      "createdAt": "2026-09-26T19:40:32.860Z",
+      "updatedAt": "2026-09-26T19:40:32.860Z",
+      "slug": "versatile-scientific-uv-visible-nir-spectrophotometer-7cc57469"
+    },
+    {
+      "id": "a4bf78412a0a559b38cab78a",
+      "name": "Versatile Scientific (ATR-FTIR Spectrometer)",
+      "categoryId": "preset-category-spectroscopy",
+      "sku": "",
+      "overview": "An FTIR molecular analysis platform with integrated Diamond ATR sampling for rapid qualitative and quantitative characterisation of solids, liquids, powders, gels, films and pastes with minimal preparation.",
+      "description": "The Versatile Scientific ATR-FTIR Spectrometer is an advanced molecular analysis platform engineered for rapid qualitative and quantitative characterization of a wide variety of materials. Based on Fourier Transform Infrared (FTIR) spectroscopy, the system provides detailed information about molecular bonds, functional groups, and chemical composition.\n\nIts integrated Diamond ATR sampling system enables direct analysis of solids, liquids, powders, gels, films, pastes, and other samples with minimal preparation. The robust optical configuration, high-stability interferometer, and sensitive detector provide excellent spectral quality, measurement repeatability, and long-term analytical stability.\n\nThe instrument incorporates intelligent functions for automatic background correction, atmospheric compensation, spectral processing, peak identification, library searching, and report generation, helping users obtain reliable analytical results efficiently.\n\nThe Versatile Scientific ATR-FTIR Spectrometer is suitable for pharmaceutical, chemical, polymer, food, environmental, forensic, petrochemical, academic, research, and industrial quality-control laboratories.",
+      "catalogueUrl": "",
+      "imageUrl": "/images/product-atr-ftir.webp",
+      "images": [
+        "/images/product-atr-ftir.webp"
+      ],
+      "features": [
+        "FTIR spectroscopy for qualitative and quantitative molecular characterisation.",
+        "Integrated Diamond ATR sampling for direct analysis with minimal sample preparation.",
+        "Supports solids, liquids, powders, gels, films and pastes.",
+        "High-stability interferometer and sensitive detector for spectral quality and measurement repeatability.",
+        "Automatic background correction and atmospheric compensation.",
+        "Spectral processing, peak identification, library searching and report generation."
+      ],
+      "specifications": [
+        {
+          "label": "Instrument Type",
+          "value": "ATR-FTIR Spectrometer"
+        },
+        {
+          "label": "Measurement Principle",
+          "value": "Fourier Transform Infrared Spectroscopy"
+        },
+        {
+          "label": "ATR Crystal",
+          "value": "Diamond ATR"
+        },
+        {
+          "label": "Interferometer",
+          "value": "High-Stability Michelson Type"
+        }
+      ],
+      "status": "published",
+      "featured": true,
+      "createdAt": "2026-09-26T19:40:32.860Z",
+      "updatedAt": "2026-09-26T19:49:53.793Z",
+      "slug": "versatile-scientific-ftir-spectrometer-a4bf7841"
+    },
+    {
+      "id": "beca2bee39d25b408d1010c9",
+      "name": "Versatile Scientific (Raman Spectrometer)",
+      "categoryId": "preset-category-spectroscopy",
+      "sku": "",
+      "overview": "A molecular characterisation platform for non-destructive analysis of chemical composition, molecular structure and material properties, with multiple laser excitation options and optional microscope integration.",
+      "description": "The Versatile Scientific Raman Spectrometer is an advanced molecular characterization platform engineered for non-destructive analysis of chemical composition, molecular structure, and material properties. Raman spectroscopy provides a molecular fingerprint of a sample, making the system suitable for identification and characterization without extensive sample preparation.\n\nThe instrument supports multiple laser excitation wavelengths and configurable optical arrangements, allowing analysis of a broad range of solids, powders, liquids, polymers, pharmaceuticals, pigments, semiconductors, minerals, coatings, and advanced materials. Its high-sensitivity detector and optimized optical system provide reliable spectral acquisition with excellent signal quality.\n\nAdvanced software enables spectral acquisition, baseline correction, peak analysis, spectral comparison, library searching, material identification, quantitative analysis, and report generation. Optional microscope integration and precision sample positioning further support micro-area and localized Raman measurements.\n\nThe Versatile Scientific Raman Spectrometer is suitable for pharmaceutical, chemical, materials science, semiconductor, forensic, environmental, geological, academic, research, and industrial quality-control laboratories.",
+      "catalogueUrl": "",
+      "imageUrl": "/images/product-raman.webp",
+      "images": [
+        "/images/product-raman.webp"
+      ],
+      "features": [
+        "High-Sensitivity Raman Detection – Enables reliable identification of molecular fingerprints and weak Raman signals.",
+        "Multiple Laser Excitation Options – Provides flexible wavelength selection for different sample types and fluorescence conditions."
+      ],
+      "specifications": [
+        {
+          "label": "Instrument Type",
+          "value": "Raman Spectrometer"
+        },
+        {
+          "label": "Measurement Principle",
+          "value": "Raman Scattering Spectroscopy"
+        },
+        {
+          "label": "Laser Power Control",
+          "value": "Computer-Controlled Variable Output"
+        },
+        {
+          "label": "Detector",
+          "value": "Thermoelectrically Cooled CCD"
+        },
+        {
+          "label": "Optical Configuration",
+          "value": "Confocal / Microscope-Coupled Optical System"
+        }
+      ],
+      "status": "published",
+      "featured": true,
+      "createdAt": "2026-09-26T19:40:32.860Z",
+      "updatedAt": "2026-09-26T19:53:15.172Z",
+      "slug": "versatile-scientific-raman-spectrometer-beca2bee"
+    },
+    {
+      "id": "616c171da335078c14d20782",
+      "name": "Versatile Scientific (Fluorescence Spectrophotometer)",
+      "categoryId": "preset-category-spectroscopy",
+      "sku": "vi-100",
+      "overview": "An optical spectroscopy system for sensitive fluorescence and photoluminescence analysis, with excitation and emission wavelength selection, a xenon light source, dual monochromators and photomultiplier detection.",
+      "description": "The Versatile Scientific Fluorescence Spectrophotometer is a high-performance optical spectroscopy system engineered for sensitive fluorescence and photoluminescence analysis of a wide variety of samples. The instrument provides precise excitation and emission wavelength selection for studying fluorescent compounds, molecular interactions, biological materials, and advanced functional materials.\n\nIts advanced optical configuration combines a high-intensity xenon light source, dual monochromator arrangement, and sensitive photomultiplier detection system to provide excellent spectral quality and low-level signal detection. Flexible measurement modes allow users to perform excitation and emission scans, synchronous measurements, time-dependent fluorescence studies, and quantitative analysis.\n\nThe system incorporates intelligent software for instrument control, spectral acquisition, data processing, peak analysis, spectral comparison, kinetic measurements, and professional report generation. Programmable measurement parameters allow users to optimize experiments for different sample types and analytical requirements.\n\nThe Versatile Scientific Fluorescence Spectrophotometer is suitable for pharmaceutical, biotechnology, chemical, environmental, food, materials science, academic, research, and industrial quality-control laboratories.",
+      "catalogueUrl": "",
+      "imageUrl": "/images/product-fluorescence.webp",
+      "images": [
+        "/images/product-fluorescence.webp",
+        "/uploads/8ac14fe114b2cd55b21ce947.webp",
+        "/uploads/70a3538f3ec885bc1aaf1b36.webp"
+      ],
+      "features": [
+        "Precise excitation and emission wavelength selection for fluorescence and photoluminescence analysis.",
+        "High-intensity xenon light source, dual monochromators and sensitive photomultiplier detection.",
+        "Excitation and emission scans, synchronous measurements and time-dependent fluorescence studies.",
+        "Quantitative analysis and kinetic measurements for application-specific studies.",
+        "Software for instrument control, spectral acquisition, data processing, peak analysis and spectral comparison.",
+        "Programmable measurement parameters and professional report generation."
+      ],
+      "specifications": [
+        {
+          "label": "Instrument Type",
+          "value": "Fluorescence Spectrophotometer"
+        },
+        {
+          "label": "Light Source",
+          "value": "High-Intensity Xenon Arc Lamp"
+        },
+        {
+          "label": "Monochromator System",
+          "value": "Dual Czerny-Turner Monochromator"
+        },
+        {
+          "label": "Detector",
+          "value": "High-Sensitivity Photomultiplier Tube (PMT)"
+        }
+      ],
+      "status": "published",
+      "featured": true,
+      "createdAt": "2026-09-26T19:40:32.860Z",
+      "updatedAt": "2026-09-26T20:10:23.441Z",
+      "slug": "versatile-scientific-fluorescence-spectrophotometer-616c171d"
+    }
+  ],
+  "quotations": [],
+  "contacts": []
+}

@@ -11,7 +11,7 @@ test("minimal future products get a branded PDF without requiring an image", asy
   assert.ok(output.startsWith("%PDF-"));
   assert.ok(output.includes("Versatile Test Instrument"));
   assert.ok(output.includes("VERSATILE INSTRUMENTS"));
-  assert.ok(output.includes("contact@versatileinsturments.com"));
+  assert.ok(output.includes("contact@versatileinstruments.com"));
   assert.ok(!output.includes("Technical specifications"));
 });
 

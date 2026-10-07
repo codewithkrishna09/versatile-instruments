@@ -24,7 +24,7 @@ const sections = [
   ],
   [
     "Keeping and updating your information",
-    "We retain enquiry and quotation details for as long as needed to manage the requirement, provide support or meet legal and operational obligations. You may ask us to update, correct or delete the information you have provided by writing to contact@versatileinsturments.com.",
+    "We retain enquiry and quotation details for as long as needed to manage the requirement, provide support or meet legal and operational obligations. You may ask us to update, correct or delete the information you have provided by writing to contact@versatileinstruments.com.",
   ],
 ];
 
@@ -72,8 +72,8 @@ export default function PrivacyPolicyPage() {
               For any question about this policy or your information, please
               write to:
             </p>
-            <a href="mailto:contact@versatileinsturments.com">
-              contact@versatileinsturments.com
+            <a href="mailto:contact@versatileinstruments.com">
+              contact@versatileinstruments.com
             </a>
           </aside>
         </section>

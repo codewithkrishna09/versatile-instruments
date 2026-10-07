@@ -379,11 +379,11 @@ export default function ContactPage() {
               <div>
                 <span>EMAIL</span>
                 <div className="contact-direct-emails">
-                  <a href="mailto:contact@versatileinsturments.com">
-                    contact@versatileinsturments.com <Arrow diagonal />
+                  <a href="mailto:contact@versatileinstruments.com">
+                    contact@versatileinstruments.com <Arrow diagonal />
                   </a>
-                  <a href="mailto:sales@versatileinsturments.com">
-                    sales@versatileinsturments.com <Arrow diagonal />
+                  <a href="mailto:sales@versatileinstruments.com">
+                    sales@versatileinstruments.com <Arrow diagonal />
                   </a>
                 </div>
               </div>

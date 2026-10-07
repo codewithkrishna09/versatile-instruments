@@ -85,6 +85,21 @@ This folder keeps data safe when the website code is updated or the backend is r
 
 Set up a regular backup of `/var/lib/versatile-data`.
 
+### Restore the initial catalogue
+
+The GitHub repository contains a safe initial catalogue at
+`deployment/catalogue-seed`. It has the published categories, products and
+their uploaded images. It does not contain an admin password, contact messages
+or quotation requests.
+
+Run this once on a new EC2 server, before opening the website:
+
+```bash
+cd /var/www/versatile-instruments
+cp -R deployment/catalogue-seed/. /var/lib/versatile-data/
+sudo chown -R "$USER":"$USER" /var/lib/versatile-data
+```
+
 ## 6. Create the private server environment file
 
 Create this file on EC2:
@@ -113,18 +128,14 @@ ADMIN_LOGIN_EMAIL=admin@versatileinstruments.com
 ADMIN_LOGIN_PASSWORD=replace-with-a-strong-password
 ADMIN_SETUP_TOKEN=replace-with-a-long-random-token
 
-# Use Zoho SMTP if it is already configured for the company.
-SMTP_HOST=smtppro.zoho.in
-SMTP_PORT=587
-SMTP_SECURE=false
-SMTP_USER=no-reply@your-verified-email-domain.com
-SMTP_PASS=replace-with-zoho-app-password
-MAIL_FROM=Versatile Instruments <no-reply@your-verified-email-domain.com>
+# Resend customer acknowledgement email
+RESEND_API_KEY=re_add-the-private-production-key-here
+MAIL_FROM=Versatile Instruments <no-reply@versatileinstruments.com>
 
 SHARED_CATALOGUE_URL=https://your-public-brochure-link.pdf
 ```
 
-Use the exact public website domain in `CLIENT_ORIGIN`. Do not keep `http://localhost:5173` in production. The SMTP sender address must be a verified sender in Zoho or Resend.
+Use the exact public website domain in `CLIENT_ORIGIN`. Do not keep `http://localhost:5173` in production. `MAIL_FROM` must be a verified sender in Resend. Do not add the Resend key to GitHub or to the frontend.
 
 `ADMIN_SETUP_TOKEN` is needed only when creating the first production admin through the setup form. If `ADMIN_LOGIN_EMAIL` and `ADMIN_LOGIN_PASSWORD` are set, use those to log in and the setup token is not needed. Never share the `.env` file or its values.
 
@@ -215,7 +226,7 @@ Paste this configuration:
 ```nginx
 server {
     listen 80;
-    server_name versatileinstruments.com www.versatileinstruments.com;
+    server_name versatileinstruments.com;
 
     root /var/www/versatile-instruments/client/dist;
     index index.html;
@@ -269,10 +280,10 @@ After DNS points to EC2, install the SSL certificate:
 
 ```bash
 sudo apt install -y certbot python3-certbot-nginx
-sudo certbot --nginx -d versatileinstruments.com -d www.versatileinstruments.com
+sudo certbot --nginx -d versatileinstruments.com
 ```
 
-Both `versatileinstruments.com` and `www.versatileinstruments.com` must point to the EC2 IP before running this command. If the company uses only the main domain, remove the `-d www.versatileinstruments.com` part.
+`versatileinstruments.com` must point to the EC2 IP before running this command. Add `www` later only when its DNS record and permanent redirect are configured.
 
 Then test:
 

@@ -114,7 +114,7 @@ export async function createProductBrochure(product, { download = true } = {}) {
     });
   }
   heading("Enquiries & contact");
-  text("+91 9559454555 | contact@versatileinsturments.com");
+  text("+91 9559454555 | contact@versatileinstruments.com");
   text(
     "H. No. 2753, 3rd Floor, Street No. 13, Ranjit Nagar, Patel Nagar South, New Delhi, Central Delhi, Delhi 110008",
     9,

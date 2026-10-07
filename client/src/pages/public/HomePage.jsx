@@ -290,11 +290,11 @@ export function Footer() {
                 New Delhi, Central Delhi, Delhi 110008
               </span>
               <a href="tel:+919559454555">+91 95594 54555</a>
-              <a href="mailto:contact@versatileinsturments.com">
-                contact@versatileinsturments.com
+              <a href="mailto:contact@versatileinstruments.com">
+                contact@versatileinstruments.com
               </a>
-              <a href="mailto:sales@versatileinsturments.com">
-                sales@versatileinsturments.com
+              <a href="mailto:sales@versatileinstruments.com">
+                sales@versatileinstruments.com
               </a>
             </address>
             <a className="public-footer-enquiry" href="/contact#enquiry">
