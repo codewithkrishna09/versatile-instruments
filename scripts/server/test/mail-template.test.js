@@ -8,14 +8,16 @@ test("product receipt includes product and safe reference, without team copy", (
   assert.match(result.html, /Test &lt;Lab&gt;/);
   assert.match(result.html, /Raman &amp; FTIR/);
   assert.doesNotMatch(result.html, /Test <Lab>/);
-  assert.match(result.html, /cid:versatile-logo/);
+  assert.match(result.html, /cid:versatile-logo@versatileinstruments\.com/);
   assert.match(result.html, /bgcolor="#f5f3ee"/);
   assert.match(result.html, /alt="Versatile Instruments logo"/);
   assert.match(result.html, /tel:\+919559454555/);
-  assert.match(result.html, /mailto:versatileinstru@gmail\.com/);
+  assert.match(result.html, /mailto:contact@versatileinstruments\.com/);
+  assert.match(result.html, /mailto:sales@versatileinstruments\.com/);
   assert.match(result.html, /Patel Nagar South, New Delhi, Central Delhi, Delhi 110008/);
   assert.match(result.text, /Phone: \+91 95594 54555/);
-  assert.match(result.text, /Email: versatileinstru@gmail\.com/);
+  assert.match(result.text, /Email: contact@versatileinstruments\.com/);
+  assert.match(result.text, /Sales: sales@versatileinstruments\.com/);
 });
 
 test("contact receipt excludes product section", () => {

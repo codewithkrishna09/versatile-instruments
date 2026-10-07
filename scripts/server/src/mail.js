@@ -9,7 +9,7 @@ import {
 } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { createReceipt } from "./mail-template.js";
+import { createReceipt, INLINE_LOGO_CID } from "./mail-template.js";
 
 let transport;
 const persistentDataDirectory = process.env.PERSISTENT_DATA_DIRECTORY?.trim();
@@ -153,7 +153,8 @@ export async function sendCustomerReceipt(item, sender) {
             filename: "versatile-logo.png",
             content: logo.toString("base64"),
             content_type: "image/png",
-            content_id: "versatile-logo",
+            content_id: INLINE_LOGO_CID,
+            content_disposition: "inline",
           },
         ],
       }),
@@ -182,7 +183,7 @@ export async function sendCustomerReceipt(item, sender) {
           dirname(fileURLToPath(import.meta.url)),
           "../assets/versatile-mail-logo.png",
         ),
-        cid: "versatile-logo",
+        cid: INLINE_LOGO_CID,
       },
     ],
   });

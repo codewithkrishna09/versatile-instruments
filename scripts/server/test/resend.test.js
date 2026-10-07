@@ -41,7 +41,8 @@ test("Resend HTTPS receipts preserve failures, retry with the same key, and incl
   assert.equal(payload.cc, undefined);
   assert.equal(payload.bcc, undefined);
   assert.match(payload.text, /Product: Raman/);
-  assert.match(payload.html, /cid:versatile-logo/);
-  assert.equal(payload.attachments[0].content_id, "versatile-logo");
+  assert.match(payload.html, /cid:versatile-logo@versatileinstruments\.com/);
+  assert.equal(payload.attachments[0].content_id, "versatile-logo@versatileinstruments.com");
+  assert.equal(payload.attachments[0].content_disposition, "inline");
   assert.equal(Buffer.from(payload.attachments[0].content, "base64").subarray(1, 4).toString(), "PNG");
 });
