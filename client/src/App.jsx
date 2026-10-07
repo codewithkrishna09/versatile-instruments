@@ -194,7 +194,9 @@ function Auth({ setupRequired, onAuthenticated }) {
               onChange={(e) => setEmail(e.target.value)}
               autoComplete="username"
               required
-              placeholder={setupRequired ? "name@company.com" : "Enter your admin ID"}
+              placeholder={
+                setupRequired ? "name@company.com" : "Enter your admin ID"
+              }
             />
           </label>
           <label>

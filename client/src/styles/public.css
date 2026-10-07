@@ -72,9 +72,32 @@
   object-fit: contain;
   flex: none;
 }
-.public-brand-light .public-brand-mark {
+.public-footer .public-brand-light .public-brand-mark {
+  width: 58px;
+  height: 58px;
+  overflow: hidden;
+  padding: 1px;
   background: #f5f3ee;
-  border-radius: 8px;
+  border: 1px solid rgb(245 243 238 / 70%);
+  border-radius: 50%;
+}
+.public-footer .public-brand-light .public-brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.12);
+}
+.public-footer .public-brand-light {
+  gap: 14px;
+}
+.public-footer .public-brand-light .public-brand-type {
+  gap: 2px;
+  font-size: 15px;
+  letter-spacing: 0.16em;
+}
+.public-footer .public-brand-light .public-brand-type small {
+  font-size: 10px;
+  letter-spacing: 0.22em;
 }
 .public-brand-type {
   display: grid;
@@ -1322,8 +1345,26 @@
     height: 37px;
     font-size: 24px;
   }
+  .public-footer .public-brand-light .public-brand-mark {
+    width: 46px;
+    height: 46px;
+    padding: 1px;
+  }
   .public-brand-type {
     font-size: 11px;
+  }
+  .public-footer .public-brand-light {
+    gap: 12px;
+  }
+  .public-footer .public-brand-light .public-brand-mark {
+    width: 52px;
+    height: 52px;
+  }
+  .public-footer .public-brand-light .public-brand-type {
+    font-size: 13px;
+  }
+  .public-footer .public-brand-light .public-brand-type small {
+    font-size: 9px;
   }
   .public-menu-button {
     width: 40px;

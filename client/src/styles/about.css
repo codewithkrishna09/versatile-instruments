@@ -106,9 +106,13 @@
   border-radius: 4px;
   background: #fff;
   color: var(--ink);
-  font: 700 13px/1.4 Manrope, sans-serif;
+  font:
+    700 13px/1.4 Manrope,
+    sans-serif;
   cursor: pointer;
-  transition: border-color 160ms ease, background 160ms ease;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease;
 }
 .about-organisations-toggle:hover,
 .about-organisations-toggle:focus-visible {

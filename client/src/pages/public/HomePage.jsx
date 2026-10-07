@@ -4,10 +4,29 @@ import "../../styles/home.css";
 import OrganisationStrip from "./OrganisationStrip.jsx";
 
 const briefDetails = [
-  { number: "01", title: "The sample or material", description: "What will be measured, tested, prepared or processed?" },
-  { number: "02", title: "The result you need", description: "Share the method, output, range or decision the result must support." },
-  { number: "03", title: "How the work runs", description: "Note throughput, repeatability and any important workflow constraints." },
-  { number: "04", title: "The practical setting", description: "Include space, utilities, access or a preferred model if these are known." },
+  {
+    number: "01",
+    title: "The sample or material",
+    description: "What will be measured, tested, prepared or processed?",
+  },
+  {
+    number: "02",
+    title: "The result you need",
+    description:
+      "Share the method, output, range or decision the result must support.",
+  },
+  {
+    number: "03",
+    title: "How the work runs",
+    description:
+      "Note throughput, repeatability and any important workflow constraints.",
+  },
+  {
+    number: "04",
+    title: "The practical setting",
+    description:
+      "Include space, utilities, access or a preferred model if these are known.",
+  },
 ];
 
 const applications = [
@@ -35,24 +54,80 @@ const applications = [
 ];
 
 const capabilities = [
-  { number: "01", title: "Instrument selection", description: "Compare the method, performance range and practical specifications against the work you need to do." },
-  { number: "02", title: "Site & workflow context", description: "Bring space, access, utilities and the surrounding process into the equipment conversation early." },
-  { number: "03", title: "Custom requirements", description: "Describe the sample, capacity or operating conditions when a standard specification is not enough." },
-  { number: "04", title: "Specific equipment", description: "Already have a preferred make or model? Start from it and clarify the technical requirements around it." },
+  {
+    number: "01",
+    title: "Instrument selection",
+    description:
+      "Compare the method, performance range and practical specifications against the work you need to do.",
+  },
+  {
+    number: "02",
+    title: "Site & workflow context",
+    description:
+      "Bring space, access, utilities and the surrounding process into the equipment conversation early.",
+  },
+  {
+    number: "03",
+    title: "Custom requirements",
+    description:
+      "Describe the sample, capacity or operating conditions when a standard specification is not enough.",
+  },
+  {
+    number: "04",
+    title: "Specific equipment",
+    description:
+      "Already have a preferred make or model? Start from it and clarify the technical requirements around it.",
+  },
 ];
 
 const useCases = [
-  { number: "A", title: "Research laboratories", description: "Explore methods and instrument capabilities around the question your team is investigating." },
-  { number: "B", title: "Materials & surfaces", description: "Connect characterisation and testing needs to the material, sample and measurement range." },
-  { number: "C", title: "Industrial workflows", description: "Consider throughput, repeatability and the way an instrument fits an existing process." },
-  { number: "D", title: "Quality & analysis", description: "Identify the measurements, outputs and operating conditions that make a useful technical brief." },
+  {
+    number: "A",
+    title: "Research laboratories",
+    description:
+      "Explore methods and instrument capabilities around the question your team is investigating.",
+  },
+  {
+    number: "B",
+    title: "Materials & surfaces",
+    description:
+      "Connect characterisation and testing needs to the material, sample and measurement range.",
+  },
+  {
+    number: "C",
+    title: "Industrial workflows",
+    description:
+      "Consider throughput, repeatability and the way an instrument fits an existing process.",
+  },
+  {
+    number: "D",
+    title: "Quality & analysis",
+    description:
+      "Identify the measurements, outputs and operating conditions that make a useful technical brief.",
+  },
 ];
 
 const homeQuestions = [
-  { question: "Can I ask about a specific instrument?", answer: "Yes. Share the make or model, the intended application and any required specifications so the enquiry starts with useful context." },
-  { question: "What if I do not know which instrument I need?", answer: "Start with the sample or material, the result you need, expected range and approximate throughput. Those details help frame the discussion." },
-  { question: "Can site constraints be part of the brief?", answer: "Yes. Mention available space, access, utilities and workflow constraints. The scope of any site-related work can then be discussed directly." },
-  { question: "Where can I see available products?", answer: "The Products page shows instruments published through the catalogue. If a product is not listed, you can still send a specific enquiry." },
+  {
+    question: "Can I ask about a specific instrument?",
+    answer:
+      "Yes. Share the make or model, the intended application and any required specifications so the enquiry starts with useful context.",
+  },
+  {
+    question: "What if I do not know which instrument I need?",
+    answer:
+      "Start with the sample or material, the result you need, expected range and approximate throughput. Those details help frame the discussion.",
+  },
+  {
+    question: "Can site constraints be part of the brief?",
+    answer:
+      "Yes. Mention available space, access, utilities and workflow constraints. The scope of any site-related work can then be discussed directly.",
+  },
+  {
+    question: "Where can I see available products?",
+    answer:
+      "The Products page shows instruments published through the catalogue. If a product is not listed, you can still send a specific enquiry.",
+  },
 ];
 
 export function Arrow({ diagonal = false }) {
@@ -87,7 +162,12 @@ export function Brand({ light = false }) {
       aria-label="Versatile Instruments home"
     >
       <span className="public-brand-mark" aria-hidden="true">
-        <img src="/images/versatile-mark.webp" alt="" width="240" height="240" />
+        <img
+          src="/images/versatile-mark.webp"
+          alt=""
+          width="240"
+          height="240"
+        />
       </span>
       <span className="public-brand-type">
         VERSATILE<small>INSTRUMENTS</small>
@@ -111,6 +191,7 @@ export function Header() {
     ["Solutions", "/solutions"],
     ["Products", "/products"],
     ["Contact", "/contact"],
+    ["Privacy", "/privacy-policy"],
   ];
   return (
     <header className="public-header">
@@ -169,11 +250,19 @@ function SectionHeading({ index, kicker, title, description }) {
 export function Footer() {
   return (
     <footer className="public-footer">
-      <div className="public-footer-lead"><span>HAVE A REQUIREMENT IN MIND?</span><a href="/contact#enquiry">Let’s start with the details <Arrow diagonal /></a></div>
+      <div className="public-footer-lead">
+        <span>HAVE A REQUIREMENT IN MIND?</span>
+        <a href="/contact#enquiry">
+          Let’s start with the details <Arrow diagonal />
+        </a>
+      </div>
       <div className="public-footer-top">
         <div>
           <Brand light />
-          <p>Scientific and industrial instrumentation, explored through application, specification and practical fit.</p>
+          <p>
+            Scientific and industrial instrumentation, explored through
+            application, specification and practical fit.
+          </p>
         </div>
         <div className="public-footer-links">
           <div>
@@ -182,6 +271,7 @@ export function Footer() {
             <a href="/about">About</a>
             <a href="/solutions">Solutions</a>
             <a href="/products">Products</a>
+            <a href="/privacy-policy">Privacy Policy</a>
           </div>
           <div>
             <span>DISCOVER</span>
@@ -192,11 +282,24 @@ export function Footer() {
           <div>
             <span>CONNECT</span>
             <address className="public-footer-contact">
-              <span>H. No. 2753, 3rd Floor, Street No. 13<br />Ranjit Nagar, Patel Nagar South<br />New Delhi, Central Delhi, Delhi 110008</span>
+              <span>
+                H. No. 2753, 3rd Floor, Street No. 13
+                <br />
+                Ranjit Nagar, Patel Nagar South
+                <br />
+                New Delhi, Central Delhi, Delhi 110008
+              </span>
               <a href="tel:+919559454555">+91 95594 54555</a>
-              <a href="mailto:versatileinstru@gmail.com">versatileinstru@gmail.com</a>
+              <a href="mailto:contact@versatileinsturments.com">
+                contact@versatileinsturments.com
+              </a>
+              <a href="mailto:sales@versatileinsturments.com">
+                sales@versatileinsturments.com
+              </a>
             </address>
-            <a className="public-footer-enquiry" href="/contact#enquiry">Send an enquiry <Arrow diagonal /></a>
+            <a className="public-footer-enquiry" href="/contact#enquiry">
+              Send an enquiry <Arrow diagonal />
+            </a>
           </div>
         </div>
       </div>
@@ -399,10 +502,39 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="public-capabilities" aria-labelledby="home-capabilities-title">
+        <section
+          className="public-capabilities"
+          aria-labelledby="home-capabilities-title"
+        >
           <div className="public-section public-capabilities-inner">
-            <div className="public-capabilities-heading"><span className="public-section-index">02 / WHAT WE CONSIDER</span><h2 id="home-capabilities-title">The instrument is one part of the solution.</h2><p>A useful recommendation begins with the application, then looks at the equipment, the site and the way both need to work together.</p><a className="public-inline-link" href="/solutions">Explore our solutions <Arrow diagonal /></a></div>
-            <div className="public-capabilities-list">{capabilities.map((item) => <article key={item.number}><span>{item.number}</span><div><h3>{item.title}</h3><p>{item.description}</p></div><Arrow diagonal /></article>)}</div>
+            <div className="public-capabilities-heading">
+              <span className="public-section-index">
+                02 / WHAT WE CONSIDER
+              </span>
+              <h2 id="home-capabilities-title">
+                The instrument is one part of the solution.
+              </h2>
+              <p>
+                A useful recommendation begins with the application, then looks
+                at the equipment, the site and the way both need to work
+                together.
+              </p>
+              <a className="public-inline-link" href="/solutions">
+                Explore our solutions <Arrow diagonal />
+              </a>
+            </div>
+            <div className="public-capabilities-list">
+              {capabilities.map((item) => (
+                <article key={item.number}>
+                  <span>{item.number}</span>
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                  <Arrow diagonal />
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -476,9 +608,34 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="public-section public-use-cases" aria-labelledby="home-use-cases-title">
-          <SectionHeading index="05" kicker="WHERE IT FITS" title="Built around the work, not a one-size-fits-all list." description="Different teams approach instrumentation from different starting points. These contexts help turn a broad search into a clearer brief." />
-          <div className="public-use-cases-layout"><div className="public-use-cases-media"><img src="/images/about-laboratory.webp" alt="Analytical instrument and samples in a laboratory setting" loading="lazy" /></div><div className="public-use-cases-list">{useCases.map((item) => <article key={item.number}><span>{item.number}</span><h3>{item.title}</h3><p>{item.description}</p></article>)}</div></div>
+        <section
+          className="public-section public-use-cases"
+          aria-labelledby="home-use-cases-title"
+        >
+          <SectionHeading
+            index="05"
+            kicker="WHERE IT FITS"
+            title="Built around the work, not a one-size-fits-all list."
+            description="Different teams approach instrumentation from different starting points. These contexts help turn a broad search into a clearer brief."
+          />
+          <div className="public-use-cases-layout">
+            <div className="public-use-cases-media">
+              <img
+                src="/images/about-laboratory.webp"
+                alt="Analytical instrument and samples in a laboratory setting"
+                loading="lazy"
+              />
+            </div>
+            <div className="public-use-cases-list">
+              {useCases.map((item) => (
+                <article key={item.number}>
+                  <span>{item.number}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
         </section>
 
         <section className="public-section public-products" id="products">
@@ -501,7 +658,11 @@ export default function HomePage() {
               <div className="public-product-grid">
                 {catalogue.products.map((product) => (
                   <article className="public-product-card" key={product.id}>
-                    <a className="public-product-image" href={`/products/${product.slug}`} aria-label={`View ${product.name}`}>
+                    <a
+                      className="public-product-image"
+                      href={`/products/${product.slug}`}
+                      aria-label={`View ${product.name}`}
+                    >
                       {product.imageUrl ? (
                         <img
                           src={product.imageUrl}
@@ -522,7 +683,9 @@ export default function HomePage() {
                       </span>
                       <span>{product.sku || "VI"}</span>
                     </div>
-                    <h3><a href={`/products/${product.slug}`}>{product.name}</a></h3>
+                    <h3>
+                      <a href={`/products/${product.slug}`}>{product.name}</a>
+                    </h3>
                     <button type="button" onClick={() => enquireAbout(product)}>
                       Enquire about this instrument <Arrow diagonal />
                     </button>
@@ -553,9 +716,67 @@ export default function HomePage() {
           )}
         </section>
 
-        <section className="public-manufacturer" aria-labelledby="home-manufacturer-title"><div className="public-section public-manufacturer-inner"><div><span className="public-section-index">07 / MANUFACTURER CONTEXT</span><h2 id="home-manufacturer-title">Technology matters. The right fit matters more.</h2></div><div><p>If you are considering a particular manufacturer, method or model, include it in your brief. That gives the technical conversation a concrete starting point while keeping the application at the centre.</p><p>The most useful comparison includes the result you need, the conditions around the work and the capabilities that matter most.</p><a className="public-inline-link" href="/contact#enquiry">Discuss a preferred model <Arrow diagonal /></a></div></div></section>
+        <section
+          className="public-manufacturer"
+          aria-labelledby="home-manufacturer-title"
+        >
+          <div className="public-section public-manufacturer-inner">
+            <div>
+              <span className="public-section-index">
+                07 / MANUFACTURER CONTEXT
+              </span>
+              <h2 id="home-manufacturer-title">
+                Technology matters. The right fit matters more.
+              </h2>
+            </div>
+            <div>
+              <p>
+                If you are considering a particular manufacturer, method or
+                model, include it in your brief. That gives the technical
+                conversation a concrete starting point while keeping the
+                application at the centre.
+              </p>
+              <p>
+                The most useful comparison includes the result you need, the
+                conditions around the work and the capabilities that matter
+                most.
+              </p>
+              <a className="public-inline-link" href="/contact#enquiry">
+                Discuss a preferred model <Arrow diagonal />
+              </a>
+            </div>
+          </div>
+        </section>
 
-        <section className="home-brief" aria-labelledby="home-brief-title"><div className="public-section home-brief-inner"><div className="home-brief-lead"><span className="public-section-index">08 / A USEFUL STARTING POINT</span><h2 id="home-brief-title">A better enquiry starts with a better brief.</h2><p>You do not need a finished specification to get started. These four details make it easier to discuss equipment in the context of your actual work.</p><a className="public-inline-link" href="#contact">Share your requirement <Arrow diagonal /></a></div><div className="home-brief-grid">{briefDetails.map((detail) => <article key={detail.number}><span>{detail.number} / BRIEF</span><h3>{detail.title}</h3><p>{detail.description}</p></article>)}</div></div></section>
+        <section className="home-brief" aria-labelledby="home-brief-title">
+          <div className="public-section home-brief-inner">
+            <div className="home-brief-lead">
+              <span className="public-section-index">
+                08 / A USEFUL STARTING POINT
+              </span>
+              <h2 id="home-brief-title">
+                A better enquiry starts with a better brief.
+              </h2>
+              <p>
+                You do not need a finished specification to get started. These
+                four details make it easier to discuss equipment in the context
+                of your actual work.
+              </p>
+              <a className="public-inline-link" href="#contact">
+                Share your requirement <Arrow diagonal />
+              </a>
+            </div>
+            <div className="home-brief-grid">
+              {briefDetails.map((detail) => (
+                <article key={detail.number}>
+                  <span>{detail.number} / BRIEF</span>
+                  <h3>{detail.title}</h3>
+                  <p>{detail.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <section className="public-process" id="process">
           <div className="public-process-inner">
@@ -596,7 +817,35 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="public-section public-home-faq" aria-labelledby="home-faq-title"><div className="public-home-faq-heading"><span className="public-section-index">10 / BEFORE YOU ENQUIRE</span><h2 id="home-faq-title">A few useful answers.</h2><p>The more context you can share, the more focused the next conversation can be.</p></div><div className="public-home-faq-list">{homeQuestions.map((item, index) => <details key={item.question}><summary><span>{String(index + 1).padStart(2, "0")}</span>{item.question}<span className="public-home-faq-plus" aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div></section>
+        <section
+          className="public-section public-home-faq"
+          aria-labelledby="home-faq-title"
+        >
+          <div className="public-home-faq-heading">
+            <span className="public-section-index">
+              10 / BEFORE YOU ENQUIRE
+            </span>
+            <h2 id="home-faq-title">A few useful answers.</h2>
+            <p>
+              The more context you can share, the more focused the next
+              conversation can be.
+            </p>
+          </div>
+          <div className="public-home-faq-list">
+            {homeQuestions.map((item, index) => (
+              <details key={item.question}>
+                <summary>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  {item.question}
+                  <span className="public-home-faq-plus" aria-hidden="true">
+                    +
+                  </span>
+                </summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
 
         <section className="public-section public-contact" id="contact">
           <div className="public-contact-copy">

@@ -369,6 +369,11 @@
   font-size: 14px;
   gap: 8px;
 }
+.contact-direct-emails {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+}
 .contact-direct-details a svg {
   width: 15px;
   height: 15px;

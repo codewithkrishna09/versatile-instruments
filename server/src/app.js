@@ -18,8 +18,10 @@ if (/^[1-9]\d*$/.test(process.env.TRUST_PROXY_HOPS || ""))
 app.disable("x-powered-by");
 const deriveKey = promisify(scrypt);
 const sessionLifetime = 24 * 60 * 60 * 1000;
+const persistentDataDirectory = process.env.PERSISTENT_DATA_DIRECTORY?.trim();
 const dataFile =
   process.env.DATA_FILE ||
+  (persistentDataDirectory && resolve(persistentDataDirectory, "store.json")) ||
   resolve(dirname(fileURLToPath(import.meta.url)), "../data/store.json");
 // Sessions are intentionally process-local; a server restart signs admins out.
 const sessions = new Map();
@@ -33,8 +35,9 @@ const initialData = {
   contacts: [],
 };
 const uploadDirectory = resolve(
-  dirname(fileURLToPath(import.meta.url)),
-  "../uploads",
+  process.env.UPLOAD_DIRECTORY ||
+    (persistentDataDirectory && resolve(persistentDataDirectory, "uploads")) ||
+    resolve(dirname(fileURLToPath(import.meta.url)), "../uploads"),
 );
 const upload = multer({
   storage: multer.memoryStorage(),
@@ -138,7 +141,11 @@ function envAdminCredentials() {
   // An empty password keeps the existing stored login active until the owner
   // has set both values. Never persist the env password into the product store.
   if (!password) return null;
-  if (!/^\S+@\S+\.\S+$/.test(email) || password.length < 12 || password.length > 256)
+  if (
+    !/^\S+@\S+\.\S+$/.test(email) ||
+    password.length < 12 ||
+    password.length > 256
+  )
     return { invalid: true };
   return { email, password };
 }
@@ -305,7 +312,8 @@ app.get("/api/admin/catalogue-config", requireAdmin, (_request, response) => {
 app.post("/api/auth/setup", async (request, response) => {
   // First-run setup closes permanently as soon as an admin account is stored.
   const data = await load();
-  if (data.admin || envAdminCredentials()) return fail(response, "Admin account already exists.", 409);
+  if (data.admin || envAdminCredentials())
+    return fail(response, "Admin account already exists.", 409);
   if (
     process.env.NODE_ENV === "production" &&
     (!process.env.ADMIN_SETUP_TOKEN ||
@@ -341,26 +349,29 @@ app.post("/api/auth/login", async (request, response) => {
     return fail(response, "Admin sign-in configuration is invalid.", 503);
   const email = clean(request.body.email).toLowerCase();
   const password = request.body.password;
-  if (
-    typeof password !== "string" ||
-    password.length > 256
-  )
+  if (typeof password !== "string" || password.length > 256)
     return fail(response, "Invalid email or password.", 401);
   let valid = false;
   if (envAdmin && email === envAdmin.email) {
     const salt = "versatile-env-admin-v1";
     const candidate = Buffer.from(await passwordHash(password, salt), "hex");
-    const expected = Buffer.from(await passwordHash(envAdmin.password, salt), "hex");
+    const expected = Buffer.from(
+      await passwordHash(envAdmin.password, salt),
+      "hex",
+    );
     valid = timingSafeEqual(candidate, expected);
   } else if (
-    admin && email === admin.email &&
+    admin &&
+    email === admin.email &&
     (!envAdmin || process.env.ADMIN_ALLOW_LEGACY_LOGIN === "true")
   ) {
-    const candidate = Buffer.from(await passwordHash(password, admin.salt), "hex");
+    const candidate = Buffer.from(
+      await passwordHash(password, admin.salt),
+      "hex",
+    );
     valid = timingSafeEqual(candidate, Buffer.from(admin.hash, "hex"));
   }
-  if (!valid)
-    return fail(response, "Invalid email or password.", 401);
+  if (!valid) return fail(response, "Invalid email or password.", 401);
   for (const [key, session] of sessions)
     if (Date.now() - session.createdAt >= sessionLifetime) sessions.delete(key);
   sessions.delete(cookie(request).vi_session);
@@ -471,8 +482,13 @@ for (const collection of ["quotations", "contacts"]) {
     await save(data);
     if (collection === "contacts") contactAttempts.get(email).push(Date.now());
     // Admin record is saved first; temporary SMTP failure never loses the enquiry.
-    try { await queueCustomerReceipt({ ...item, kind: collection }); }
-    catch { console.error(`Could not queue customer receipt for ${item.id}; enquiry remains in admin.`); }
+    try {
+      await queueCustomerReceipt({ ...item, kind: collection });
+    } catch {
+      console.error(
+        `Could not queue customer receipt for ${item.id}; enquiry remains in admin.`,
+      );
+    }
     response.status(201).json({ ok: true });
   });
 }

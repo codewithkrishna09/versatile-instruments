@@ -8,6 +8,7 @@ import SolutionsPage from "./pages/public/SolutionsPage.jsx";
 import ContactPage from "./pages/public/ContactPage.jsx";
 import ProductsPage from "./pages/public/ProductsPage.jsx";
 import ProductDetailPage from "./pages/public/ProductDetailPage.jsx";
+import PrivacyPolicyPage from "./pages/public/PrivacyPolicyPage.jsx";
 import "./styles/global.css";
 import "./styles/public.css";
 
@@ -36,7 +37,7 @@ function PublicRouter() {
       const url = new URL(link.href, window.location.href);
       if (
         url.origin !== window.location.origin ||
-        !/^\/(?:about\/?|solutions\/?|contact\/?|products(?:\/[^/]+)?\/?|)$/.test(
+        !/^\/(?:about\/?|solutions\/?|contact\/?|privacy-policy\/?|products(?:\/[^/]+)?\/?|)$/.test(
           url.pathname,
         )
       )
@@ -79,6 +80,8 @@ function PublicRouter() {
       <SolutionsPage />
     ) : pathname === "/contact" ? (
       <ContactPage />
+    ) : pathname === "/privacy-policy" ? (
+      <PrivacyPolicyPage />
     ) : pathname === "/products" ? (
       <ProductsPage />
     ) : pathname.startsWith("/products/") ? (

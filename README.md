@@ -37,6 +37,16 @@ server/                     Node.js API
 
 The React app uses port 5173 and the API uses port 5003 by default. Admin data is saved in `server/data/store.json`; uploads are saved in `server/uploads/`. Both are excluded from Git. Back them up before moving or redeploying the site.
 
+### Persistent storage for deployment
+
+For a single-server deployment, attach a persistent disk to the backend service and set `PERSISTENT_DATA_DIRECTORY` to its mount path. For example, if a Render disk is mounted at `/var/data`, set:
+
+```env
+PERSISTENT_DATA_DIRECTORY=/var/data
+```
+
+The server then stores product/admin/enquiry data at `/var/data/store.json`, uploaded product images at `/var/data/uploads/`, and email retry records at `/var/data/mail-outbox/`. These survive backend restarts and redeploys. Do not run more than one backend instance with this JSON store. A multi-server deployment should move product data to a database and uploaded files to object storage such as Amazon S3.
+
 To manage the admin login through the server environment, set `ADMIN_LOGIN_EMAIL` and `ADMIN_LOGIN_PASSWORD` in `server/.env`, then restart the API. The password must be 12–256 characters. With both set, the env ID/password replace the old stored login; existing products and enquiries remain untouched. Leave `ADMIN_LOGIN_PASSWORD` empty until you are ready—the stored login continues to work meanwhile. Do not commit or share `.env`. Change either credential in `.env` and restart to apply it. The login form labels this identifier “Admin ID”; an email-shaped ID such as `admin@versatile.in` does not have to be a working mailbox. To intentionally allow the old stored ID as well, set `ADMIN_ALLOW_LEGACY_LOGIN=true` (not recommended).
 
 ## Shared external product brochure
